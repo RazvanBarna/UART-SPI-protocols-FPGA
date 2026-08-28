@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../UART_SPI.srcs/sources_1/new/clock_div.vhd" \
+"../../../../UART_SPI.srcs/sources_1/new/test_uart.vhd" \
+"../../../../UART_SPI.srcs/sources_1/new/uart_in.vhd" \
+"../../../../UART_SPI.srcs/sources_1/new/uart_out.vhd" \
+"../../../../UART_SPI.srcs/sim_1/new/sim.vhd" \
+
+# Do not sort compile order
+nosort
