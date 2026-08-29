@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="67" Path="C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.xpr">
+<Project Product="Vivado" Version="7" Minor="67" Path="C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="731910338ddd4f43be3b84928672cc07"/>
@@ -103,6 +103,12 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/display_7seg.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/mem.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>

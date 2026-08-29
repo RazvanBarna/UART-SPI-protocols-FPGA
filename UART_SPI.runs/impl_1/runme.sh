@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.runs/impl_1'
+HD_PWD='C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,7 +42,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log test_uart.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source test_uart.tcl -notrace
 
 

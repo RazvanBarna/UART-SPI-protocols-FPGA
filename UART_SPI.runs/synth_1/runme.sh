@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.runs/synth_1'
+HD_PWD='C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

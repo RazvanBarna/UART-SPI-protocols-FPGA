@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.runs/synth_1/test_uart.tcl"
+  variable script "C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.runs/synth_1/test_uart.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,27 +56,30 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.cache/wt [current_project]
-set_property parent.project_path C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.xpr [current_project]
+set_property webtalk.parent_dir C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.cache/wt [current_project]
+set_property parent.project_path C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo c:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.cache/ip [current_project]
+set_property ip_output_repo c:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.srcs/sources_1/new/bridge_uart_spi.vhd
-  C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.srcs/sources_1/new/clock_div.vhd
-  C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.srcs/sources_1/new/display_7seg.vhd
-  C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.srcs/sources_1/new/uart_in.vhd
-  C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.srcs/sources_1/new/uart_out.vhd
-  C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.srcs/sources_1/new/test_uart.vhd
+  C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.srcs/sources_1/new/bridge_uart_spi.vhd
+  C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.srcs/sources_1/new/clock_div.vhd
+  C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.srcs/sources_1/new/display_7seg.vhd
+  C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.srcs/sources_1/new/mem.vhd
+  C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.srcs/sources_1/new/uart_in.vhd
+  C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.srcs/sources_1/new/uart_out.vhd
+  C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.srcs/sources_1/new/test_uart.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -87,12 +90,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc
-set_property used_in_implementation false [get_files C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc]
+read_xdc C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Facultate/An_3/Semestrul_2/proiecte/Proiect_uart_spi/UART_SPI/UART_SPI.srcs/utils_1/imports/synth_1/test_uart.dcp
+read_checkpoint -auto_incremental -incremental C:/Facultate/Projects/UART-SPI-protocols-FPGA/UART_SPI.srcs/utils_1/imports/synth_1/test_uart.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
