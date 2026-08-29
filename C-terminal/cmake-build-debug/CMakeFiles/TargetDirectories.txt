@@ -1,0 +1,3 @@
+C:/Facultate/Projects/UART-SPI-protocols-FPGA/C-terminal/cmake-build-debug/CMakeFiles/C_terminal.dir
+C:/Facultate/Projects/UART-SPI-protocols-FPGA/C-terminal/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Facultate/Projects/UART-SPI-protocols-FPGA/C-terminal/cmake-build-debug/CMakeFiles/rebuild_cache.dir

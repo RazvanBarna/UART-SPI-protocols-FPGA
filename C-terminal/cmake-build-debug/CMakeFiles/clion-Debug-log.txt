@@ -1,0 +1,10 @@
+"C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.2.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Facultate\Projects\UART-SPI-protocols-FPGA\C-terminal -B C:\Facultate\Projects\UART-SPI-protocols-FPGA\C-terminal\cmake-build-debug
+-- The C compiler identification is MSVC 19.41.34120.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (3.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Facultate/Projects/UART-SPI-protocols-FPGA/C-terminal/cmake-build-debug
